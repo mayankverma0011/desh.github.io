@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Rubik:wght@300&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+
+    width: 100%;
+    background: #E5E7EB;
+    display: flex;
+}
+
+
+#side-menu {
+    width: 250px;
+    height: 100vh;
+    background: #111827;
+    position: fixed;
+    top: 0%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 0px 50px 25px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h2 {
+    margin-left: 10px;
+    color: #fff;
+}
+
+.menu li {
+    list-style: none;
+    padding: 15px 40px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    background: #253047;
+}
+
+.menu li a {
+    padding-left: 20px;
+    color: #fff;
+}
+
+#main {
+    width: calc(100% - 250px);
+    position: relative;
+    margin-left: 250px;
+
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #253047;
+    padding: 20px 30px;
+    background: #fff;
+    position: fixed;
+    width: calc(100% - 250px);
+    z-index: 1;
+
+
+}
+
+.top-bar .search {
+    border: 1px solid #b2b3b8;
+    cursor: pointer;
+    background: #e0e0e0;
+    box-shadow: 14px 14px 27px #dcdcdc,
+        -14px -14px 27px #e4e4e4;
+
+}
+
+.top-bar .search i {
+    padding: 10px 11px;
+}
+
+.top-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.top-bar .side-logo img {
+    width: 30px;
+    border-radius: 50%;
+    background: #111827;
+}
+
+.top-bar .side-logo i {
+    position: absolute;
+    right: 80px;
+    top: 28px;
+}
+
+
+.board h1 {
+    margin: 100px 0px 40px 40px
+}
+
+.main-cards {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 220px;
+    height: 100px;
+    background: #fff;
+    border: 1px solid #fff;
+    padding-left: 20px;
+    border-radius: 10px;
+
+
+}
+
+.card .icon {
+    background: #111827;
+    color: #fff;
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 25px;
+}
+
+.card .text h3 {
+    font: size 20px;
+    ;
+}
+
+.card .text p {
+    font-size: 16px;
+    left: 0px;
+}
+    
+ 
+
+
+
+table {
+    width: calc(97% - 60px);
+    margin-left: 45px;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border: 1px solid rgb(192, 187, 187);
+    border-radius: 10px;
+
+}
+
+thead {
+    background: #253047;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+thead th {
+    text-align: start;
+    padding: 15px 8px;
+
+}
+
+tbody {
+    background: #fff;
+
+}
+
+tr {
+    border-bottom: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+.col .img img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+tbody tr td p {
+    font-size: 10px;
+}
+
+.text-1 {
+    margin-left: 10px;
+}
+
+.text-1 h4 {
+    font-size: 12px;
+    padding-bottom: 3px;
+
+}
+
+
+.col {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+td h4 {
+    font-size: 12px;
+}
+
+
+span {
+    background: aquamarine;
+    border-radius: 40px;
+    padding: 2px 5px;
+}
+
+td h5 {
+    color: #111827;
+}
+
+.navbar {
+    display: none;
+    font-size: 20px;
+}
+
+
+
+
+
+/*----------media query for tablat----------*/
+@media (max-width:1024px) {
+
+    .top-bar {
+        width: 73%;
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    #side-menu {
+        width: 249px;
+        margin-left: -249px;
+        height: 100vh;
+        position: fixed;
+        transition: 0.3s;
+    }
+
+    #side-menu.active {
+        margin-left: 0px;
+    }
+
+    #side-menu.active~#main {
+        width: calc(100% - 250px);
+        margin-left: 250px;
+    }
+
+    #main {
+        width: 100%;
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    .main-cards {
+        flex-wrap: wrap-reverse;
+    }
+
+    .card {
+        padding: 10px 20px;
+        margin: 10px 10px 20px 0px;
+        flex-basis: 0pt;
+    }
+
+    table {
+        width: calc(73% - 15px);
+        margin-left: 15px;
+    }
+
+}
+
+
+
+/*-------------------- media query for mobile-------------------*/
+@media (max-width:767px) {
+   
+    .top-bar {
+        width: 52%;
+        position: fixed;
+        overflow-x: hidden;
+        top: 0%;
+    }
+
+    .top-bar .search {
+        width: 100px;
+    }
+
+    .navbar i {
+        margin-left: -12px;
+    }
+
+
+    .top-bar .side-logo i {
+        display: none;
+    }
+
+    .top-bar .side-logo img {
+        position: relative;
+        left: 12px;
+    }
+
+    .top-bar .search {
+        width: 148px;
+        margin-left: 11px;
+    }
+
+    .top-bar input {
+        width: 60px;
+    }
+    .main-cards {
+       display: block;
+       position: static;
+       left: 0%;
+       right: 0%;
+       overflow-x: hidden;
+    }
+    .card {
+       
+        margin: 10px 10px 20px 20px;
+       
+    }
+
+    table {
+    width: 134%;
+    overflow-x: auto;
+    }
+
+    td h5 {
+        color: #111827;
+        padding-right: 20px;
+    }
+
+}
